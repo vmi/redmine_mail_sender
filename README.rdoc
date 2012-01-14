@@ -1,6 +1,8 @@
-= mail_sender
+= redmine_mail_sender
 
 Add "Sender:" field to mails sent by Redmine.
+
+Target Redmine version is 1.2.0 or higher.
 
 = Setup
 
@@ -9,6 +11,7 @@ Add "sender:" parameter under */email_delivery/smtp_settings to "config/configra
 == Example
 
 =====================================================================
+...
 default:
   # Outgoing emails configuration (see examples above)
   email_delivery:
@@ -17,6 +20,7 @@ default:
       address: "localhost"
       port: 25
       domain: "example.com"
-      ### Add sender mail address ###
+      ### Add sender mail address as follows ###
       sender: "sender@example.com"
+...
 =====================================================================
