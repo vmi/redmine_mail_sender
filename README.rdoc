@@ -1,24 +1,26 @@
-= redmine_mail_sender
+= Redmine Mail Sender
 
 Add "Sender:" field to mails sent by Redmine.
 
 Target Redmine version is 1.2.0 or higher.
 
-= Setup
+== Install
 
-Add "sender:" parameter under */email_delivery/smtp_settings to "config/configration.yml".
-
-== Example
-
-  (snip)
-  default:
-    # Outgoing emails configuration (see examples above)
-    email_delivery:
-      delivery_method: :smtp
-      smtp_settings:
-        address: "localhost"
-        port: 25
-        domain: "example.com"
-        ### Add sender mail address as follows ###
-        sender: "sender@example.com"
-  (snip)
+1. Copy your plugin directory into <tt>#{RAILS_ROOT}/vendor/plugins</tt>. If you are downloading the plugin directly from GitHub, you can do so by changing into your plugin directory and issuing a command like:
+     git clone git://github.com/vmi/redmine_mail_sender.git
+ 
+2. Add "sender:" parameter under */email_delivery/smtp_settings to "config/configration.yml".
+     (snip)
+     default:
+       # Outgoing emails configuration (see examples above)
+       email_delivery:
+         delivery_method: :smtp
+         smtp_settings:
+           address: "localhost"
+           port: 25
+           domain: "example.com"
+           ### Add sender mail address as follows ###
+           sender: "sender@example.com"
+     (snip)
+  
+3. Restart Redmine.
