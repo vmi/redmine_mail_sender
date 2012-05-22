@@ -2,7 +2,7 @@
 
 Add "Sender:" field to mails sent by Redmine.
 
-Target Redmine version is 1.2.0 or higher.
+Target Redmine version is 1.x (1.2.0 or higher).
 
 == Install
 
